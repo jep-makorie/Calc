@@ -4,6 +4,31 @@
     <title>LinkedIn Job Application</title>
 
     <style>
+
+        input[type="radio"] {
+            accent-color:brown;
+            cursor: pointer;
+        }
+        .designed::-webkit-slider-runnable-track {
+            background: yellow;
+            height: 5px;
+            cursor: pointer;
+        }
+        .designed::-webkit-slider-thumb {
+            appearance:none;
+            background: blue;
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+        .default-one {
+            accent-color:red;
+            cursor:pointer;
+        }
+
+
         .big-button {
             background-color: rgb(0, 94, 255);
             color: white;
@@ -14,10 +39,11 @@
             font-weight: bold;
             font-size: 13px;
             margin-right: 10px;
+            margin-bottom:10px;
             cursor: pointer;
             vertical-align: middle;
             transition: background-color 0.3s ease,
-                color 0.3s ease,;
+                color 0.3s ease;
         }
          .big-button:hover {
             background-color: rgb(225, 189, 9);
@@ -49,13 +75,86 @@
         }
 
         .small-button:hover {
-            opacity: 0.5;
             box-shadow: 8px 8px 8px rgba(180, 4, 4, 0.5);
         }
         .small-button:active {
             opacity: 0.3;
-    }
+        }
 
+        .border-styling {
+            background-color: lightblue;
+            color: black;
+            font-family: Arial;
+            border-color: red;
+            border-width: 10px;
+            border-style: dashed;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 40px;
+            font-weight: 600;
+            vertical-align: middle;
+            transition: background-color 0.1s linear, box-shadow 0.1s ease;
+            padding: 5px 5px 5px 5px;
+           
+        }
+
+        .border-styling:hover {
+            box-shadow: 10px 10px 10px green;
+            transform: scale(1.5);
+            animation: bounce 0.5s;
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .border-styling:active {
+            background-color: yellow;
+            color: purple;
+        }
+        .response {
+            background-color: white;
+            color: black;
+            border-color: black;
+            width: 100px;
+            height: 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 13px;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-left: 50px;
+            transition: all 0.3s ease;
+        }
+        #tc-checkbox:checked ~.response {
+            background-color: gray;
+            color: green;
+            box-shadow: none;         
+            transform: none;   
+            cursor: pointer;
+            pointer-events:auto;
+        }
+        .sophias {
+            color: rgba(73, 73, 1, 0.434)
+        }
+        .natalias {
+            color: rgba(0, 255, 55, 0.479)
+        }
+        .sofias {
+            color: rgb(0, 255, 255)
+        }
+        .enterr {
+            background-color: rgb(207, 120, 234);
+            border-style: groove;
+            cursor: pointer;
+        }
+        .enterr:hover {
+            transform: scale(1.2);
+        }
+        .enterr:active {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 
@@ -65,6 +164,70 @@
     </button>
     <button class="small-button">
         Job
+    </button>
+    <button class="border-styling">
+        Trees
+    </button>
+    <br>
+    <input type="password" id="your-password" placeholder="Enter Your Password">
+    <label for="your-password"> Password</label>
+    <br>
+
+    <form>
+        <p>Select your friend's name:</p>
+        <input type="radio" id="choice1" name="friends" value="Sophia">
+        <label for="choice1"> Soph </label>
+        <br>
+
+        <input type="radio" id="choice2" name="friends" value="Natalia">
+        <label for="choice2"> Nat </label>
+        <br>
+        <input type="radio" id="choice3" name="friends" value="Maybe" checked>
+        <label for="choice3" > Sof </label>
+        <br>
+
+        <button type="submit" class="enterr">Submit</button>
+        <br>
+
+        <p>Select intensity:</p>
+        <input type="range" class="designed" id="choice1" name="friends" value="Sophia">
+        <label for="choice1" class="sophias"> Soph </label>
+        <br>
+
+        <input type="range" class="designed" id="choice2" name="friends" value="Natalia">
+        <label for="choice2" class="natalias"> Nat </label>
+        <br>
+        <input type="range" class="designed" id="choice3" name="friends" value="Maybe" checked>
+        <label for="choice3" class="sofias"> Sof </label>
+        <br>
+
+        <button type="submit" class="enterr">Submit</button>
+        <br>
+
+        <p>Confirm intensity:</p>
+        <input type="range" class="default-one" id="choice1" name="friends" value="Sophia">
+        <label for="choice1" class="sophias"> Soph </label>
+        <br>
+
+        <input type="range" class="default-one" id="choice2" name="friends" value="Natalia">
+        <label for="choice2" class="natalias"> Nat </label>
+        <br>
+        <input type="range" class="default-one" id="choice3" name="friends" value="Maybe" checked>
+        <label for="choice3" class="sofias"> Sof </label>
+        <br>
+
+        <button type="submit" class="enterr">Submit</button>
+        <br>
+
+    </form>
+    <br>
+    <input type="checkbox" id="tc-checkbox">
+    <label from="tc-checkbox">
+        I agree to the Terms and Conditions of Service
+    </label>
+    <br>
+    <button class="response">
+        Submit
     </button>
 </body>
 </html>
