@@ -1,2 +1,2 @@
-# CalculatorUI
+# Calc
 Fun Calculator Project
