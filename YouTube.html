@@ -2,14 +2,199 @@
 <html>
     <head>  
         <title> 
-            YouTube.com
+            Form
         </title>
+        <style>
+            .labels{
+                font-family: "Times New Roman", Times, serif;
+                font-weight:600;
+            }
+            input[type="checkbox"] {
+              font-family: "Times New Roman", Times, serif;
+              font-weight:600;
+              margin: 10px 0px 0px 0px;
+            }
+           .radio-btns:hover {
+                transform: scale(1.2);
+            }
+            .inputs {
+                font-family:Arial;
+                width: 300px;
+                height:30px;
+                border-color: rgb(215, 99, 22);
+                margin: 5px 0px 10px 0px;
+                border-radius:100px;
+                border:solid;
+            }
+            
+
+            .inputs:hover {
+                transform: scale(1.1);
+            }
+
+            .submit-btn{
+                font-weight: 500;
+                font-family:Arial;
+                background-color: rgb(238, 93, 238);
+                color: white;
+                vertical-align: middle;
+                padding: 5px 5px 5px 5px;
+                margin: 10px 0px 50px 30px;
+                border: none;
+                width: 100px;
+                height: 40px;
+                border-radius: 50px;
+            }
+            .submit-btn:hover{
+                transform: scale(1.1);
+            }
+            .intelli-1 {
+                font-weight:700;
+                color: rgb(174, 9, 9);
+                font-family: 'Comfortaa', sans-serif;
+            }
+              .intelli-2 {
+                font-weight:700;
+                color: rgb(215, 90, 6);
+                font-family: 'Comfortaa', sans-serif;
+            }
+              .intelli-3 {
+                font-weight:700;
+                color: rgb(37, 174, 9);
+                font-family: 'Comfortaa', sans-serif;
+            }
+              .intelli-4 {
+                font-weight:700;
+                color: rgb(163, 205, 9);
+                font-family: 'Comfortaa', sans-serif;
+            }
+              .intelli-5 {
+                font-weight:700;
+                color: rgb(126, 14, 178);
+                font-family: 'Comfortaa', sans-serif;
+            }
+
+            .designed::-webkit-slider-runnable-track {
+                background: rgb(167, 8, 119);
+                height: 5px;
+                cursor: pointer;
+                border-radius: 25%;
+            }
+            .designed::-webkit-slider-thumb {
+            appearance:none;
+            background: rgb(128, 0, 19);
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -6px;
+            }
+
+
+
+
+
+
+        </style>
     </head>
 
     <body>
+        <form>
+            <label for="name-identification" class="labels">
+                Name:
+            </label>
+            <br>
+            <input type="text" id="name-identification" placeholder="Enter your name" class="inputs">
+            <br>
 
-        <p>
-           
-        </p>
+            <label for="age-identification" class="labels">
+                Age:
+            </label>
+            <br>
+            <input type="number" id="age-identification" placeholder="Enter your age" class="inputs">
+            <br>
+
+            <label for="email-identification" class="labels">
+                Email:
+            </label>
+            <br>
+            <input type="email" id="email-identification" placeholder="Enter your email" class="inputs">
+            <br>
+
+            <label for="address1-identification" class="labels">
+               Address Line 1:
+            </label>
+            <br>
+            <input type="text" id="address1-identification" placeholder="Adress Line 1" class="inputs">
+            <br>
+
+            <label for="address2-identification" class="labels">
+               Address Line 2:
+            </label>
+            <br>
+            <input type="text" id="address2-identification" placeholder="Adress Line 2" class="inputs">
+            <br>
+
+            <label for="address-identification" class="labels">
+               Passport Number:
+            </label>
+            <br>
+            <input type="text" id="passport-identification" placeholder="Enter your Passport Number" class="inputs">
+            <br>
+
+            <label for="password-identification" class="labels">
+               Password:
+            </label>
+            <br>
+            <input type="password" id="password-identification" placeholder="Enter your Password" class="inputs">
+            <br>
+            <label for="password-identification" class="labels">
+               Confirm Password:
+            </label>
+            <br>
+            <input type="password" id="password-identification" placeholder="Renter your Password" class="inputs">
+            <br>
+
+            <p>On a scale of 5, how smart are you:</p>
+            <input type="radio" id="1" name="choices" value="Dumb asf" class="radio-btns">
+            <label for="1" class="intelli-1"> Dumb asf </label>
+
+            <input type="radio" id="2" name="choices" value="Dumb" class="radio-btns">
+            <label for="2" class="intelli-2"> Dumb </label>
+        
+            <input type="radio" id="3" name="choices" value="Average" class="radio-btns">
+            <label for="3" class="intelli-3"> Average </label>
+            
+            <input type="radio" id="4" name="choices" value="Normal" class="radio-btns">
+            <label for="4" class="intelli-4"> Normal</label>
+
+            <input type="radio" id="5" name="choices" value="Smart ash" class="radio-btns">
+            <label for="5" class="intelli-5"> Smart ash </label>
+            <br>
+
+            <p>How much do you enjoy the following subjects:</p>
+            <input type="range" class="designed" id="choice1" name="subjects" value="Math">
+            <label for="choice1"> Math </label>
+            <br>
+
+            <input type="range" class="designed" id="choice2" name="subjects" value="Physics" checked>
+            <label for="choice2"> Physics </label>
+            <br>
+            <input type="range" class="designed" id="choice3" name="subjects" value="Chemistry">
+            <label for="choice3"> Chemistry </label>
+            <br>
+
+            <input type="checkbox" id="tc-checkbox">
+            <label for="tc-checkbox">
+              I agree to the Terms and Conditions of Service
+            </label>
+            <br>
+
+
+            <button type="submit" class="submit-btn">
+                Submit
+            </button>
+
+        </form>
     </body>
 </html>
