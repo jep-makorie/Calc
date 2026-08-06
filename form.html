@@ -44,6 +44,12 @@
             .inputs:hover {
                 transform: scale(1.1);
             }
+            .inputs:valid{
+                border-color:rgb(19, 181, 22);
+            }
+            .inputs:invalid:not(:placeholder-shown) {
+                border-color: rgb(198, 10, 10);
+            }
 
             .submit-btn{
                 font-weight: 500;
@@ -142,45 +148,45 @@
                     Name:
                 </label>
                 <br>
-                <input type="text" id="name-identification" placeholder="Enter your name" class="inputs">
+                <input type="text" id="name-identification" placeholder="Enter your name" class="inputs" required>
                 <br>
 
                 <label for="age-identification" class="labels">
                     Age:
                 </label>
                 <br>
-                <input type="number" id="age-identification" placeholder="Enter your age" class="inputs">
+                <input type="number" id="age-identification" placeholder="Enter your age" class="inputs" required>
                 <br>
 
                 <label for="email-identification" class="labels">
                     Email:
                 </label>
                 <br>
-                <input type="email" id="email-identification" placeholder="Enter your email" class="inputs">
+                <input type="email" id="email-identification" placeholder="Enter your email" class="inputs" required>
                 <br>
             </fieldset>
 
             <fieldset>
                 <legend>Location</legend>
-                <label for="address1-identification" class="labels">
+                <label for="address1-identification" class="labels" required>
                 Address Line 1:
                 </label>
                 <br>
-                <input type="text" id="address1-identification" placeholder="Adress Line 1" class="inputs">
+                <input type="text" id="address1-identification" placeholder="Adress Line 1" class="inputs" required>
                 <br>
 
                 <label for="address2-identification" class="labels">
                 Address Line 2:
                 </label>
                 <br>
-                <input type="text" id="address2-identification" placeholder="Adress Line 2" class="inputs">
+                <input type="text" id="address2-identification" placeholder="Adress Line 2" class="inputs" required>
                 <br>
 
                 <label for="password-identification" class="labels">
                 Passport Number:
                 </label>
                 <br>
-                <input type="text" id="passport-identification" placeholder="Enter your Passport Number" class="inputs">
+                <input type="text" id="passport-identification" placeholder="Enter your Passport Number" class="inputs" required>
                 <br>
             </fieldset>
 
@@ -190,14 +196,14 @@
                 Password:
                 </label>
                 <br>
-                <input type="password" id="password-identification" placeholder="Enter your Password" class="inputs">
+                <input type="password" id="password-identification" placeholder="Enter your Password" class="inputs" required>
                 <br>
 
                 <label for="password2-identification" class="labels">
                 Confirm Password:
                 </label>
                 <br>
-                <input type="password" id="password2-identification" placeholder="Renter your Password" class="inputs">
+                <input type="password" id="password2-identification" placeholder="Renter your Password" class="inputs" required>
                 <br>
             </fieldset>
 
@@ -263,7 +269,7 @@
                 <br>
             </fieldset>
 
-            <input type="checkbox" id="tc-checkbox">
+            <input type="checkbox" id="tc-checkbox" required>
             <label for="tc-checkbox">
               I agree to the Terms and Conditions of Service
             </label>

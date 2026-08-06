@@ -4,10 +4,39 @@
         <title>Deck Shuffle</title>
     </head>
     <style>
-
+        .container{
+            display:grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-auto-rows: 50px;
+            gap: 20px 20px;
+            justify-content:center;
+            margin: 30px auto;
+        }
+        .fade-in{
+            background-color:navy;
+            color:white;
+            border-radius: 10%;
+            border:solid;
+            opacity:1;
+            transition: all 1s ease 1s;
+        }
+        .fade-in:hover{
+            opacity:0.5;
+        }
     </style>
 
     <body>
-        <button></button>
+       <div class="container">
+        <button>Glow</button>
+        <button>Bounce</button>
+        <button>Zap</button>
+        <button>Shake</button>
+        <button>Heartbeat</button>
+        <button>Slide In</button>
+        <button>Fill In</button>
+        <button class="fade-in">Fade In</button>
+        <button>Fade Out</button>
+           
+       </div>
     </body>
 </html>
