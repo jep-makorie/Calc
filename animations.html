@@ -87,11 +87,25 @@
             color:white;
             border-radius: 10%;
             border:none;
-            opacity:1;
             cursor:pointer;
-            animation:slideIn 0.8s infinite;
             position:relative;
             overflow:hidden;
+        }
+        .slide-in::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color:rgb(13, 0, 128);
+            transition:translateX(-100%);
+            z-index: 0;
+            animation:slideIn 1s infinite;
+        }
+        .slide-in span{
+            position:relative;
+            z-index:1;
         }
         @keyframes fadeOut {
             0%{
@@ -181,16 +195,19 @@
             }
         }
         @keyframes slideIn {
-           from{
-            opacity:0;
-            transform: translateX(-100px);
-           }
-           to{
-            opacity:1;
-            transform: translateX(0);
-           }
+            0% {
+                transform:translateX(-100%);
+            }
+            25% {
+                transform:translateX(0);
+            }
+            50% {
+                transform:translateX(0);
+            }
+            100% {
+                transform:translateX(100%);
+            }
         }
-
     </style>
 
     <body>
@@ -200,7 +217,9 @@
         <button class="zap">Zap</button>
         <button class="shake">Shake</button>
         <button class="heartbeat">Heartbeat</button>
-        <button class="slide-in">Slide In</button>
+        <button class="slide-in">
+            <span>Slide In</span>
+        </button>
         <button>Fill In</button>
         <button class="fade-in">Fade In</button>
         <button class="fade-out">Fade Out</button>
