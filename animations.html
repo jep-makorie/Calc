@@ -115,6 +115,7 @@
             cursor:pointer;
             position:relative;
             overflow:hidden;
+            clip-path: circle(0% at 50% 50%);
         }
         .fill-in::before {
             content:"";
@@ -124,8 +125,8 @@
             top:50%;
             left:50%;
 
-            width:10px;
-            height:10px;
+            width:5px;
+            height:2.5px;
             border-radius:50%;
 
             transform: translate(-50%,-50%) scaleX(0);
@@ -240,11 +241,12 @@
             }
         }
         @keyframes fillIn {
-            0% {
-                transform: translate(-50%,-50%) scaleX(0);
+           from {
+            clip-path: circle(0% at 50% 50%);
             }
-            100% {
-                transform: translate(-50%,-50%) scaleX(10);
+
+            to {
+            clip-path: circle(150% at 50% 50%);
             }
         }
     </style>
