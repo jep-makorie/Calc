@@ -107,6 +107,37 @@
             position:relative;
             z-index:1;
         }
+        .fill-in {
+             background-color:white;
+            color:black;
+            border-radius: 10%;
+            border:none;
+            cursor:pointer;
+            position:relative;
+            overflow:hidden;
+        }
+        .fill-in::before {
+            content:"";
+            position:absolute;
+            background:orange;
+
+            top:50%;
+            left:50%;
+
+            width:10px;
+            height:10px;
+            border-radius:50%;
+
+            transform: translate(-50%,-50%) scaleX(0);
+            transform-origin: center;
+            animation: fillIn 0.5s infinite forwards;
+
+            z-index:0;
+        }
+        .fill-in span{
+            position:relative;
+            z-index:1;
+        }
         @keyframes fadeOut {
             0%{
                 opacity:1;
@@ -208,6 +239,14 @@
                 transform:translateX(100%);
             }
         }
+        @keyframes fillIn {
+            0% {
+                transform: translate(-50%,-50%) scaleX(0);
+            }
+            100% {
+                transform: translate(-50%,-50%) scaleX(10);
+            }
+        }
     </style>
 
     <body>
@@ -220,7 +259,9 @@
         <button class="slide-in">
             <span>Slide In</span>
         </button>
-        <button>Fill In</button>
+        <button class="fill-in">
+            <span>Fill In</span>
+        </button>
         <button class="fade-in">Fade In</button>
         <button class="fade-out">Fade Out</button>
            
