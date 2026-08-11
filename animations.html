@@ -108,31 +108,21 @@
             z-index:1;
         }
         .fill-in {
-             background-color:white;
+            background-color:white;
             color:black;
             border-radius: 10%;
             border:none;
             cursor:pointer;
             position:relative;
             overflow:hidden;
-            clip-path: circle(0% at 50% 50%);
         }
         .fill-in::before {
             content:"";
             position:absolute;
             background:orange;
-
-            top:50%;
-            left:50%;
-
-            width:5px;
-            height:2.5px;
-            border-radius:50%;
-
-            transform: translate(-50%,-50%) scaleX(0);
-            transform-origin: center;
-            animation: fillIn 0.5s infinite forwards;
-
+            inset:0;
+            clip-path: circle(0% at 50% 50%);
+            animation: fillIn 1s infinite forwards;
             z-index:0;
         }
         .fill-in span{
