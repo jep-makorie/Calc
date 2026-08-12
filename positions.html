@@ -88,7 +88,7 @@
                 justify-content:center;
                 animation:glow 1s infinite,bounce 1s infinite;
             }
-            button {
+            .btn-gen {
                 position:relative;
                 margin-top:30px;
                 border:solid;
@@ -98,11 +98,10 @@
                 font-family:"Times New Roman",Times,serif;
                 cursor:pointer;
                 overflow:hidden;
+                transition: transform 0.3s ease;
             }
-            .btn {
-                position:relative;
-                z-index:2;  
-                font-size: 15px;
+            .btn-gen:hover {
+                transform: scale(1.2);
             }
             .btn-gen::before {
                 position:absolute;
@@ -110,11 +109,17 @@
                 inset:0;
                 background-color:rgb(214, 79, 79);
                 transform:scaleX(0);
-                transition: transform 0.3s ease;
+                transform-origin:left;
+                transition: transform 1s ease;
                 z-index:1;
             }
             .btn-gen:hover::before{
-                transform: scaleX(2);
+                transform: scaleX(1);
+            }
+             .btn {
+                position:relative;
+                z-index:2;  
+                font-size: 15px;
             }
              @keyframes glow {
             0% {
