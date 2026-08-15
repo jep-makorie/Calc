@@ -52,6 +52,15 @@
             }
             .underlined{
                 text-decoration: underline;
+                text-decoration-color:rgb(129, 13, 13);
+                text-decoration-style:double;
+                text-decoration-thickness:0.1em;
+                text-underline-offset:3px;
+                /*line
+                color
+                style
+                thickness
+                */
             }
             .lyrics-span{
                 font-weight:500;
@@ -163,7 +172,38 @@
             dd {
                 margin:0;
             }
-             @keyframes glow {
+            a {
+                color:blue;
+                font-size:20px;
+            }
+            a:hover {
+                color:red;
+            }
+            a:active {
+                color:black;
+            }
+            a:visited{
+                color: green;
+            }
+            .text-box {
+                position:relative;
+                width:400px;
+            }
+            .text-box img {
+               max-width:100%;
+               display:block;
+               object-fit:cover; 
+            }
+            .text-inside {
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                color:rgb(175, 81, 4);
+                font-size:30px;
+
+            }
+            @keyframes glow {
             0% {
                 box-shadow:0 0 20px red;
             }
@@ -286,6 +326,16 @@
                     </ul>
                 </li>
             </ul>
+            <br>
+            <div class="text-box">    
+                <img src="sky.jpg" alt="Window palne picture" class="picture">
+                <p class="text-inside">!!Do Not Miss!!</p>
+            </div>
+            <br>
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                Buy tickets here
+            </a>
+            <br>
         </div>
     </body>
 </html>
