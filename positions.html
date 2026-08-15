@@ -145,6 +145,24 @@
                 flex-grow:0;
                 animation:zap 1s infinite;
             }
+            ul {
+                list-style:disc inside;
+            }
+            ol {
+                list-style-type:lower-alpha;
+            }
+            li {
+                color:white;
+                margin-bottom:5px;
+            }
+            dl {
+                display:grid;
+                grid-template-columns: auto 1fr;
+                gap:5px 10px;
+            }
+            dd {
+                margin:0;
+            }
              @keyframes glow {
             0% {
                 box-shadow:0 0 20px red;
@@ -245,6 +263,29 @@
                 </ul>
                 <br>
             </div>
+            <dl>
+                <dt>August 20th:</dt>
+                <dd>JoeyBoy Live at Melbourne</dd>
+                <dt>August 28th:</dt>
+                <dd>Nikita Live at Sowetto</dd>
+            </dl>
+            <ul>
+                <li> Snacks:
+                    <ul>
+                        <li>Chips</li>
+                        <li>Watermelon</li>
+                        <li>Lime</li>
+                    </ul>
+                </li>
+                <br>
+                <li> Drinks:
+                    <ul>
+                        <li>Vodka</li>
+                        <li>Tequila</li>
+                        <li>Soda</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </body>
 </html>
