@@ -30,6 +30,82 @@
                 font-weight: 700;
 
             }
+            .glowing-btn {
+                position: relative;
+                width: 180px;
+                height: 60px;
+                border: none;
+                outline: none;
+                color: #fff;
+                background: #111;
+                cursor: pointer;
+                border-radius: 10px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: bold;
+                margin-top:20px;
+            }
+            .glowing-btn::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: conic-gradient(
+                    transparent, 
+                    #ff007f, 
+                    #7f00ff, 
+                    transparent 30%
+                );
+                animation: rotateBorder 4s linear infinite;
+            }
+            .glowing-btn::after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: conic-gradient(
+                    transparent, 
+                    #ff007f, 
+                    #7f00ff, 
+                    transparent 30%
+                );
+                animation: rotateBorder 4s linear infinite;
+                filter: blur(20px); /* Adjust this for more or less glow intensity */
+                opacity: 0.8;
+                z-index: 1;
+            }
+            .glowing-btn span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: calc(100% - 4px); /* 4px less creates a 2px visible border */
+                height: calc(100% - 4px);
+                background: #111; /* Matches button background */
+                border-radius: 8px; /* Slightly smaller than button border-radius */
+                z-index: 2; /* Sits firmly on top of the moving layers */
+                transition: 0.3s;
+            }
+            .glowing-btn:hover span {
+                background: #1a1a1a;
+                color: #ff007f;
+            }
+            @keyframes rotateBorder {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            }
+
         </style>
     </head>
     <body>
@@ -39,5 +115,9 @@
         <button class="download">
             Download
         </button>
+        <button class="glowing-btn">
+            <span>Glowing</span>
+        </button>
+
     </body>
 </html>
